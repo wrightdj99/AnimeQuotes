@@ -1,0 +1,8 @@
+HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create("https://anime-quotes1.p.rapidapi.com/api/available/anime"))
+                .header("X-RapidAPI-Key", "cc1d38da1fmsh73b309d9673daccp1c4109jsnf02b4cfb0a4e")
+                .header("X-RapidAPI-Host", "anime-quotes1.p.rapidapi.com")
+                .method("GET", HttpRequest.BodyPublishers.noBody())
+                .build();
+        HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
+        System.out.println(response.body());
