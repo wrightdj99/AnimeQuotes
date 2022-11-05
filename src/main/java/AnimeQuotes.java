@@ -21,7 +21,7 @@ public class AnimeQuotes {
         } catch (Exception e) {
             e.printStackTrace();
         }*/
-        System.out.println("Dan Wright's Anime Quote Server is running at port 5050");
+        System.out.println("Dan Wright's Anime Quote Server is running at port 5050. Give it a try!");
         while(true) {
             sock = serverSocket.accept();
             new WebServerWorker(sock).start();
